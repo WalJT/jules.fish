@@ -3,5 +3,5 @@ function fish_prompt
 end
 
 function fish_right_prompt
-  echo "Hi"
+  prompt_pwd --full-length-dirs 1
 end
