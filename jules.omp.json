@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        // {
+        //   "foreground": "#ffffff",
+        //   "style": "plain",
+        //   "template": "{{ reason .Code }}\u274c ",
+        //   "type": "status"
+        // },
+        {
+          "foreground": "#ff0000",
+          "style": "plain",
+          "template": "# ",
+          "type": "root"
+        },
+        {
+          // "foreground": "#FFFFFF",
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }}> ",
+          // "template": "\e[92m{{ .UserName }}\e[0m@{{ .HostName }}> ",
+          "type": "session"
+        }
+        // {
+        //   "background": "#007ACC",
+        //   "foreground": "#ffffff",
+        //   "properties": {
+        //     "folder_icon": "\u2026",
+        //     "folder_separator_icon": " \ue0b1 ",
+        //     "style": "agnoster_short",
+        //     "max_depth": 3
+        //   },
+        //   "style": "plain",
+        //   "template": "<transparent>\ue0b0</> {{ .Path }} ",
+        //   "type": "path"
+        // },
+        // {
+        //   "foreground": "#007ACC",
+        //   "style": "plain",
+        //   "template": "\ue0b0 ",
+        //   "type": "text"
+        // }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "segments": [
+        {
+          // "background": "#ffc107",
+          // "foreground": "#18354c",
+          // "powerline_symbol": "\ue0b0",
+          "style": "plain",
+          "template": "(\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }})",
+          "type": "python"
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          // "foreground": "#ffffff",
+          // "background": "#61AFEF",
+          "properties": {
+            "folder_separator_icon": "/",
+            "home_icon": "~",
+            "folder_icon": ".."
+          }
+        }
+      ]
+    }
+  ],
+  "version": 2
+}
